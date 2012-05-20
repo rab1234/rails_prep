@@ -13,8 +13,9 @@
 #
 # This script assumes that you are using (and your Gemfile includes) rspec, 
 # cucumber & simplecov.  It also assumes that it is being run from the 
-# rails app parent directory.
+# rails app parent directory and that 'create_gemset' is in same directory.
 # =========================================================================
+#todo restore ssh key from backup; then push to github
 #
 require 'fileutils'
 

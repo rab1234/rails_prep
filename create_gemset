@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# I can't seem to create a gemset in a ruby script, so I use this bash script
+# to do that, and I call this script from my rails_prep.rb ruby script
+#
+#
+#
+echo "create new gemset for new rails application ..."
+#rvm --create 1.9.2@$1  # <--> this instruction does not work, but the following does
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" && rvm --create @$1
+# -------------------------------
+# Use the gemset we just created 
+# --------------------------------------------------------------------------------------
+#rvm gemset use 1.9.2@$1_rails323  # <--> this does not work, but the following does
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" && rvm use @$1
+# the above line came from 
+# http://stackoverflow.com/questions/8716987/how-to-change-rvm-gemset-using-bash-script
+# --------------------------------------------------------------------------------------
+echo "new gemset created"
