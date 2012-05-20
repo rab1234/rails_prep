@@ -28,7 +28,7 @@ This script will
 
 @master_file_dir_name = "master_files"  # DON'T ADD TRAILING SLASH!!
 
-and to reflect your paths.
+to reflect your paths.
 
 ###Important Note:
 The .gitignore and .simplecov are hidden files (because of the leading ".").
